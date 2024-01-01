@@ -137,11 +137,22 @@ console.log(c > b > a != d)
 // =================================================
 
 // Ken has a headache today and he said the room has been spinning like crazy. Make Ken's room spin 10 times using FOR LOOP. Make him print a sentence.
-
+const ken = "I need to lay down.";
+for (let i = 0; i < 10; i++) {
+  console.log(ken);
+}
 // Harry said that was so mean of Teo to do Ken dirty like that. Make Teo's vision spin 20 times FOR LOOP.
-
+const teo = "Can't see straight";
+for (let i = 0; i < 20; i++) {
+  console.log(teo);
+}
 // But wait! Lisa said, while Teo is spinning 20 times. Let's make him say "I'm sorry". Print I'm sorry 20 times using a WHILE loop.
-
+const apology = "I'm sorry";
+let apologyNum = 0;
+while (apologyNum < 20) {
+  console.log(apology);
+  apologyNum ++;
+}
 // For the next three, look for the syntax of FOR IN and FOR OF loop. Very easy to understand syntax, and very clean :) 
 
 // To The Left! To The Left! Everything I want in the console to the left. Print thing1, thing2, thing 3 using (FOR IN LOOP)
@@ -150,38 +161,52 @@ const whateverQueenBeySaid = {
   thing2: 'clothes',
   thing3: 'gaming console'
 }
+for (const thing in whateverQueenBeySaid) {
+  console.log(thing);
+}
 
 // Using (FOR IN LOOP), print the indexes of the array.
 const lana = ['l', 'a', 'n', 'a']
+for (const letter in lana) {
+  console.log(lana.indexOf(letter))
+}
 
 // USE (FOR OF LOOP)!
 const tia = ['teo', 'the', 'syntax', 'of', 'this', 'is', 'cleaner']
-
+for (const letter of tia) {
+  console.log(tia.indexOf(letter));
+}
 // Look into forEach() loop, it accepts a callback aka a function inside a function. 
 // Swathi said don't forget each person. No person left behind! Use forEach() to iterate over the array perscholas. Inside the function, create a variable with the string "PS". Print their name in the console concatenated with the variable. 
 const perscholas = ['Amira', 'Arely', 'Jonathan']
+function addPS(student) {
+  const string = "PS";
+  const newString = student.concat(" ", string);
+  console.log(newString);
+}
 
+perscholas.forEach(addPS);
 // =================================================
 //                     ARRAYS
 // =================================================
 
 // Look up the following: Make a note of what each one of these methods do
-// push()
-// pop()
-// unshift()
-// shift()
-// concat()
-// splice()
-// slice()
-// sort()
-// includes()
-// indexOf()
-// length
+// push() Adds an element to the end of the array and returns the new array's length
+// pop() Removes the last element from the array and returns said element
+// unshift() Same as push but adds to the beginning instead of the end
+// shift() Same as pop but removes the first element instead
+// concat() Merges 2 arrays together into a new array
+// splice() Changes the elements of an array by removing, replacing, or adding elements | splice(The index you want to change, how many elements you want to replace, the element that will be added)
+// slice() Returns a shallow copy of a part of the array depenging on the indexes you start and end from
+// sort() Sorts the elements in the array based on their UTF-16 unit values
+// includes() Returns true or false depending if the array contains the given element
+// indexOf() Returns the first index where the given element can be found 
+// length: Returns the number of elements in the array
 
 const fruits = ['apple', 'banana', 'orange']
 
 // Print banana
-
+console.log(fruits.slice(0, 2));
 // Let's turn it up a notch. I won't tell you what array methods to use. 
 
 // Join all the elements of the array into a string separated by a space.
