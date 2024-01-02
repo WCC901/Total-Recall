@@ -289,8 +289,8 @@ const donutShop =[
 // Tosi wants ihatethis. :) Print!
 const Anthony = donutShop[1][0][1];
 console.log(Anthony);
-const Tosi = donutShop[2][0][0][0][1][0];
-console.log(Tosi)
+// const Tosi = donutShop[2][0][0][0][1][0];
+// console.log(Tosi)
 // =================================================
 //                     IF/ELSE
 // =================================================
@@ -299,9 +299,33 @@ console.log(Tosi)
 // Check if Teo is a person. If true, print 'Teo is a person!' if not then print 'Teo is not a person!'
 // If Teo is a person, check to see if he is a male or a female. If male, print 'You got it right!' if not then print 'Wrong. Teo is going to remove you from the class.'.
 // If male, check to see if Teo is hungry. If Teo is 'hungry' then print 'Let's buy Teo some tacos!'. If Teo is 'not hungry' then print 'He doesn't need to eat.'. Anything else, print 'If Teo is not hungry, am I hungry?'
+const Teo = ["person", "male", "hungry"];
 
+if (Teo.includes("person")) {
+  console.log("Teo is a person!");
+  if (Teo.includes("male")) {
+    console.log("You got it right!");
+    if (Teo.includes("hungry")) {
+      console.log("Let's buy Teo some tacos!");
+    } else if (Teo.includes("not hungry")) {
+      console.log("He doesn't need to eat.");
+    } else {
+      console.log("If Teo is not hungry, am I hungry?");
+    }
+  } else if (Teo.includes("female")) {
+    console.log("Wrong. Teo is going to remove you from the class.");
+  }
+} else {
+  console.log("Teo is not a person!")
+}
 // Create a if/else ternary to check if Gustavo is the coolest. If coolest, print 'You got that right!', else print 'James wants to argue. He says he's the best!'
+const Gustavo = "coolest";
 
+if (Gustavo == "coolest") {
+  console.log("You got that right!");
+} else {
+  console.log("James wants to argue. He says he's the best!");
+}
 // =================================================
 //                     FUNCTIONS
 // =================================================
