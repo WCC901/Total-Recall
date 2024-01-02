@@ -206,50 +206,61 @@ perscholas.forEach(addPS);
 const fruits = ['apple', 'banana', 'orange']
 
 // Print banana
-console.log(fruits.slice(0, 2));
+console.log(fruits[1]);
 // Let's turn it up a notch. I won't tell you what array methods to use. 
 
 // Join all the elements of the array into a string separated by a space.
-
+console.log(fruits.join(" "));
 // Remove orange
-
+fruits.pop();
 // Add strawberry, kiwi, and grapes at the end
-
+fruits.push("strawberry", "kiwi", "grapes");
 // Remove apple
-
+fruits.shift();
 // Add mango at the beginning of the array
-
+fruits.unshift("mango")
 // Add lemon, and grapefruit between mango and banana
-
+fruits.splice(1, 0, "lemon", "grapefruit");
 // Remove banana and strawberry
-
+fruits.splice(3, 2);
+console.log(fruits);
 // Create a new array called exoticFruits. Add 3 exotic fruits inside of this array. Create a new variable and assign it with the value of concatinating fruits array and exoticFruits array.
-
+const exoticFruits = ["Jackfruit", "Lychee", "Kiwano"];
 // Print the last two exotic fruits without altering the newly concatenated array.
-
+console.log(exoticFruits[1], exoticFruits[2]);
 // Monalissa said she needs help re-organizing her items in alphabetical order.
 const monalissaIsMessy = ["pencil", "paper", "notebook", "computer"]
-
+console.log(monalissaIsMessy.sort());
 // Kevin accidentally stepped into the mirror world and needs help reversing his words.
 const mirrorMirrorOnTheWall = ["all", "them", "of", "greatest", "the", "is", "who"]
-
+console.log(mirrorMirrorOnTheWall.reverse());
 // ===== HIGHER ORDER METHODS =====
-// Rafael said he''s trying to stop cursing so much, and he wants to start with his text messages. Help him write code to eliminate the badword in his sentences. Must return a string sentence. Must use filter(). :) 
+// Rafael said he's trying to stop cursing so much, and he wants to start with his text messages. Help him write code to eliminate the badword in his sentences. Must return a string sentence. Must use filter(). :) 
 const RafaelNoBadWords = "I am so tired of this badword food. I do not want this badword badword food."
-
+const rArray = RafaelNoBadWords.split(" ");
+const result = rArray.filter((word) => word != "badword");
+console.log((result.toString()).replaceAll(",", " "));
 // Man math is hard. Let's make our computer do it for us. Use reduce() to find the total of the numbers in numbersToAddUp
 const numbersToAddUp = [99, 5677, 232, 84, 2, 231]
 
+const initialValue = 0;
+const sum = numbersToAddUp.reduce(
+  (currentSum, currentValue) => currentSum + currentValue,
+  initialValue,
+);
+console.log(sum);
 // ===== SPREAD OPERATOR ===== 
 
 // Create a variable and assign a value of a copied array using the spread operator
-
+const copy = [...numbersToAddUp];
 // Create two arrays with any elements and connect both of them using the spread operator. Save the connected arrays into a new variable.
-
+const nickCartoons = ["Spongebob Squarepants", "Ren and Stimpy", "Invader Zim"];
+const CNCartoons = ["Adventure Time", "The Amazing World of Gumball", "The Grim Adventures of Billy and Mandy"];
+const cartoons = [...nickCartoons, ...CNCartoons];
 // Using the variable with the newly connected arrays, use spread operator to add something at the end.
-
+const moreCartoons = [...cartoons, "Rick and Morty"];
 // Using the variable with the newly connected arrays, use spread operator to add something at the beginning.
-
+const evenMoreCartoons = ["Bojack Horseman", ...moreCartoons];
 // ===== ACCESS =====
 
 // Donut Shopping
@@ -276,7 +287,10 @@ const donutShop =[
 
 // Anthony wants applecrumble. Print please!
 // Tosi wants ihatethis. :) Print!
-
+const Anthony = donutShop[1][0][1];
+console.log(Anthony);
+const Tosi = donutShop[2][0][0][0][1][0];
+console.log(Tosi)
 // =================================================
 //                     IF/ELSE
 // =================================================
