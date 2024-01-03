@@ -333,41 +333,83 @@ if (Gustavo == "coolest") {
 // Don't forget to call your functions :)
 
 // Create a function called sayGreeting and PRINT 'Hello, ma'amsir!'
-
+function sayGreeting() {
+  console.log("Hello, ma'am sir!");
+}
+sayGreeting();
 // Create a function that takes a string as a parameter. PRINT 'This is my (STRING)'. Please replace the (STRING) with the parameter. Don't play with me haha.
-
-
+function showOff(item) {
+  console.log("This is my " + item);
+}
+showOff("car");
 // Create a function called add that takes in three number parameters. Create 3 variables and assign numerical values to them. Invoke your add() and pass in those three variables as arguments.
-
+function add(firstNumber, secondNumber, thirdNumber) {
+  let sum = 0;
+  sum = sum + firstNumber + secondNumber + thirdNumber;
+  console.log(sum);
+}
+const var1 = 1;
+const var2 = 2;
+const var3 = 3;
+add(var1, var2, var3);
 // Create a function called fightClub() that accepts a name parameter.  If the name:
 // 'Teo' RETURN '1st rule: You do not talk about Fight Club.'
 // 'Manara' RETURN '2nd rule: YOU DO NOT TALK ABOUT FIGHT CLUB.'
 // 'Liv' RETURN '3rd rule: If someone yells "Stop!", goes limp, taps out, the fight is over.'
 // 'Devin' RETURN '4th rule: Only two guys to a fight.'
 // Anything else, RETURN 'No shirts
-
+function fightClub(name) {
+  if (name == "Teo") {
+    console.log("1st rule: You do not talk about Fight Club.");
+  } else if (name == "Manara") {
+    console.log("2nd rule: YOU DO NOT TALK ABOUT FIGHT CLUB.")
+  } else if (name == "Liv") {
+    console.log("3rd rule: If someone yells 'Stop!', goes limp, taps out, the fight is over.");
+  } else if (name == "Devin") {
+    console.log("4th rule: Only two guys to a fight.");
+  } else {
+    console.log("No shirts");
+  }
+}
+fightClub("Devin");
 // Create a function called hello() that prints 'Hello'. Return an anonymous function inside hello() and have it print 'Goodbye'. Invoke your hello function in some way to see Hello and Goodbye in the console.
-
+function hello() {
+  console.log("Hello!");
+  const bye = function() {
+    console.log("Goodbye!")
+  }
+  bye();
+}
+hello();
 // Create a function expression with your first name as the variable and then print your first and last name
-
+const fullName = function(firstName) {
+  const lastName = "Coats";
+  console.log(firstName + " " + lastName);
+}
+fullName("Wade");
 // Create an arrow function that accepts a number and have it return that number doubled
-
+const double = n => n * 2;
+const answer = double(5);
+console.log(answer);
 // =================================================
 //                     OBJECTS
 // =================================================
 
 // Create an object and call it human. Add a name, age, and location property. Give the properties values.
-
-
-
-
+const human = {
+  name: "Kevin",
+  age: 26,
+  location: "Seattle, Washington"
+}
 // Access the name using dot notation
-
-
+const humanName = human.name;
 // Access the age using square brackets
-
+const humanAge = human["age"];
 // Use object destructuring to access location
-
+function getLocation ({name, age, location}) {
+  console.log(location);
+}
+getLocation(human);
 // ACCESS Granted
 const bulbasaur = {
   name: 'Bulbasaur',
@@ -386,19 +428,24 @@ const bulbasaur = {
 }
 
 // Print overgrow
-
+const ability = bulbasaur.abilities[0].ability;
+console.log(ability)
 // Print cut
-
-
+const move = bulbasaur.moves[2];
+console.log(move);
 // Print Bulbahhhh!!!!!
-
-
+const sound = bulbasaur.sound;
+sound();
 // Add a height of 7 to bulbasaur using the dot notation. (Don't change bulbasaur object manually)
-
+bulbasaur.height = 7;
 // Add a property called order and assign it a value of 1 using the square brackets. (Don't change bulbasaur object manually)
-
+bulbasaur["order"] = 1;
 // Print an array that contains every single properties in bulbasaur
-
+const bulbProps = [];
+Object.entries(bulbasaur).forEach(([key, value]) => {
+  bulbProps.push(key);
+})
+console.log(bulbProps);
 // Print every single properties one by one in the console
 
 // Print an array that contains every single values in bulbasaur
